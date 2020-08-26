@@ -8,4 +8,8 @@
     <Folder Include="ComplexTypes\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOnline.Core\ShopOnline.Core.csproj" />
+  </ItemGroup>
+
 </Project>

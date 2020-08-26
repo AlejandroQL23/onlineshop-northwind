@@ -1,0 +1,5 @@
+C:\Users\CihatSolak\Source\Repos\Shop-Online\ShopOnline\ShopOnline.Core\bin\Debug\netcoreapp3.1\ShopOnline.Core.deps.json
+C:\Users\CihatSolak\Source\Repos\Shop-Online\ShopOnline\ShopOnline.Core\bin\Debug\netcoreapp3.1\ShopOnline.Core.dll
+C:\Users\CihatSolak\Source\Repos\Shop-Online\ShopOnline\ShopOnline.Core\obj\Debug\netcoreapp3.1\ShopOnline.Core.csprojAssemblyReference.cache
+C:\Users\CihatSolak\Source\Repos\Shop-Online\ShopOnline\ShopOnline.Core\obj\Debug\netcoreapp3.1\ShopOnline.Core.AssemblyInfoInputs.cache
+C:\Users\CihatSolak\Source\Repos\Shop-Online\ShopOnline\ShopOnline.Core\obj\Debug\netcoreapp3.1\ShopOnline.Core.AssemblyInfo.cs

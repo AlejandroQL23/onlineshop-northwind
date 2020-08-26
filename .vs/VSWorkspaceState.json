@@ -1,6 +1,16 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ShopOnline",
+    "\\ShopOnline\\ShopOnline.Core",
+    "\\ShopOnline\\ShopOnline.Core\\DataAccess",
+    "\\ShopOnline\\ShopOnline.Core\\DataAccess\\EntityFrameworkCore",
+    "\\ShopOnline\\ShopOnline.Core\\Entities",
+    "\\ShopOnline\\ShopOnline.Northwind.Business",
+    "\\ShopOnline\\ShopOnline.Northwind.DataAccess",
+    "\\ShopOnline\\ShopOnline.Northwind.Entities",
+    "\\ShopOnline\\ShopOnline.Northwind.Entities\\Concrete"
   ],
+  "SelectedNode": "\\ShopOnline\\ShopOnline.Core\\DataAccess\\EntityFrameworkCore\\EfEntityRepositoryBase.cs",
   "PreviewInSolutionExplorer": false
 }
