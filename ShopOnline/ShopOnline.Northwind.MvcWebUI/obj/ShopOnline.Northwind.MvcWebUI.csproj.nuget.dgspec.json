@@ -4,14 +4,14 @@
     "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj": {
+    "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj",
-        "projectName": "ShopOnline.Northwind.MvcWebUI",
-        "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj",
+        "projectUniqueName": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj",
+        "projectName": "ShopOnline.Core",
+        "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj",
         "packagesPath": "C:\\Users\\CihatSolak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\obj\\",
+        "outputPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -42,6 +42,274 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Business\\ShopOnline.Northwind.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Business\\ShopOnline.Northwind.Business.csproj",
+        "projectName": "ShopOnline.Northwind.Business",
+        "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Business\\ShopOnline.Northwind.Business.csproj",
+        "packagesPath": "C:\\Users\\CihatSolak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CihatSolak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.DataAccess\\ShopOnline.Northwind.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.DataAccess\\ShopOnline.Northwind.DataAccess.csproj"
+              },
+              "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj": {
+                "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.DataAccess\\ShopOnline.Northwind.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.DataAccess\\ShopOnline.Northwind.DataAccess.csproj",
+        "projectName": "ShopOnline.Northwind.DataAccess",
+        "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.DataAccess\\ShopOnline.Northwind.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\CihatSolak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CihatSolak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj": {
+                "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj"
+              },
+              "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj": {
+                "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj",
+        "projectName": "ShopOnline.Northwind.Entities",
+        "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\ShopOnline.Northwind.Entities.csproj",
+        "packagesPath": "C:\\Users\\CihatSolak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CihatSolak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj": {
+                "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Core\\ShopOnline.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj",
+        "projectName": "ShopOnline.Northwind.MvcWebUI",
+        "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\ShopOnline.Northwind.MvcWebUI.csproj",
+        "packagesPath": "C:\\Users\\CihatSolak\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.MvcWebUI\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\CihatSolak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Business\\ShopOnline.Northwind.Business.csproj": {
+                "projectPath": "C:\\Users\\CihatSolak\\source\\repos\\Shop-Online\\ShopOnline\\ShopOnline.Northwind.Business\\ShopOnline.Northwind.Business.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

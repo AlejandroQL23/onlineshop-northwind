@@ -1,0 +1,12 @@
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\bin\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.deps.json
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\bin\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.dll
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\bin\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.pdb
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\bin\Debug\netcoreapp3.1\ShopOnline.Core.dll
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\bin\Debug\netcoreapp3.1\ShopOnline.Core.pdb
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.csprojAssemblyReference.cache
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.AssemblyInfoInputs.cache
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.AssemblyInfo.cs
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.csproj.CoreCompileInputs.cache
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.csproj.CopyComplete
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.dll
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Entities\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.Entities.pdb

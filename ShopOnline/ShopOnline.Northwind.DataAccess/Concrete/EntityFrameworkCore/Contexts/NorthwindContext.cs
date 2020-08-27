@@ -7,7 +7,7 @@ namespace ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Contexts
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=HPPROBOOK;Database=BusinessTrackDb;Integrated Security=True");
+            optionsBuilder.UseSqlServer("Data Source=HPPROBOOK;Database=Northwind;Integrated Security=True");
             base.OnConfiguring(optionsBuilder);
         }
 

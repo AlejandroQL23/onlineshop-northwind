@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ShopOnline.Northwind.DataAccess\ShopOnline.Northwind.DataAccess.csproj" />
+    <ProjectReference Include="..\ShopOnline.Northwind.Entities\ShopOnline.Northwind.Entities.csproj" />
+  </ItemGroup>
+
 </Project>
