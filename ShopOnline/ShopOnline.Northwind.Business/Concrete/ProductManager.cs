@@ -3,6 +3,7 @@ using ShopOnline.Northwind.DataAccess.Interfaces;
 using ShopOnline.Northwind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace ShopOnline.Northwind.Business.Concrete
 {
@@ -42,6 +43,11 @@ namespace ShopOnline.Northwind.Business.Concrete
         public List<Product> GetListPaged(out int totalCount, int page, int categoryId)
         {
             return _productDal.GetListPaged(out totalCount, page, categoryId);
+        }
+
+        public Product GetById(int productId)
+        {
+            return _productDal.Get(i => i.ProductId == productId);
         }
     }
 }

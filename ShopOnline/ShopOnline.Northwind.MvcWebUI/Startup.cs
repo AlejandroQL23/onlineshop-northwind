@@ -9,6 +9,7 @@ using ShopOnline.Northwind.Business.Interfaces;
 using ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Repositories;
 using ShopOnline.Northwind.DataAccess.Interfaces;
 using ShopOnline.Northwind.MvcWebUI.Middlewares;
+using ShopOnline.Northwind.MvcWebUI.Services;
 
 namespace ShopOnline.Northwind.MvcWebUI
 {
@@ -23,6 +24,7 @@ namespace ShopOnline.Northwind.MvcWebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
+            services.AddHttpContextAccessor();
 
             services.Configure<ProductControllerSettings>(Configuration.GetSection(nameof(ProductControllerSettings)));
 
@@ -32,6 +34,8 @@ namespace ShopOnline.Northwind.MvcWebUI
             services.AddScoped<ICategoryDal, EfCategoryRepository>();
             services.AddScoped<ICategoryService, CategoryManager>();
 
+            services.AddSingleton<ICartSessionService, CartSessionManager>();
+            services.AddSingleton<ICartService, CartManager>();
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
