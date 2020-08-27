@@ -38,5 +38,10 @@ namespace ShopOnline.Northwind.Business.Concrete
         {
             _productDal.Delete(new Product { ProductId = productId });
         }
+
+        public List<Product> GetListPaged(out int totalCount, int page, int categoryId)
+        {
+            return _productDal.GetListPaged(out totalCount, page, categoryId);
+        }
     }
 }

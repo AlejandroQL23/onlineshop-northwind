@@ -9,17 +9,20 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
         private readonly IProductService _productService;
 
         public ProductController(IProductService productService)
-        { 
+        {
             _productService = productService;
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public IActionResult Index(int page = 1, int categoryId = 0)
         {
-            var products = _productService.GetAll();
+            int totalCount = 0;
+            var products = _productService.GetListPaged(out totalCount, page, categoryId);
 
-            ProductListViewModel productListViewModel = new ProductListViewModel
+            var productListViewModel = new ProductListViewModel
             {
+                Page = page,
+                PageSize = totalCount / 10,
                 Products = products
             };
 
