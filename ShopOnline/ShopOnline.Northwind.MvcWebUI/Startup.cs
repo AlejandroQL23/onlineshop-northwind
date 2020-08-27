@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ShopOnline.Core.Settings;
 using ShopOnline.Northwind.Business.Concrete;
 using ShopOnline.Northwind.Business.Interfaces;
 using ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Repositories;
@@ -12,14 +14,24 @@ namespace ShopOnline.Northwind.MvcWebUI
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; set; }
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
+
+            services.Configure<ProductControllerSettings>(Configuration.GetSection(nameof(ProductControllerSettings)));
+
             services.AddScoped<IProductDal, EfProductRepository>();
             services.AddScoped<IProductService, ProductManager>();
 
             services.AddScoped<ICategoryDal, EfCategoryRepository>();
             services.AddScoped<ICategoryService, CategoryManager>();
-           
+
 
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
         }
@@ -33,6 +45,8 @@ namespace ShopOnline.Northwind.MvcWebUI
 
             app.UseRouting();
             app.UseNodeModules(env.ContentRootPath);
+
+            app.UseSession();
 
             app.UseEndpoints(endpoints =>
             {

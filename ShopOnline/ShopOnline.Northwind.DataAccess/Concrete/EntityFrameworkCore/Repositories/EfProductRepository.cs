@@ -1,4 +1,6 @@
-﻿using ShopOnline.Core.DataAccess.EntityFrameworkCore;
+﻿using Microsoft.Extensions.Options;
+using ShopOnline.Core.DataAccess.EntityFrameworkCore;
+using ShopOnline.Core.Settings;
 using ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Contexts;
 using ShopOnline.Northwind.DataAccess.Interfaces;
 using ShopOnline.Northwind.Entities.Concrete;
@@ -9,6 +11,12 @@ namespace ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Repositor
 {
     public class EfProductRepository : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
     {
+        public IOptions<ProductControllerSettings> _productControllerSettings { get; set; }
+        public EfProductRepository(IOptions<ProductControllerSettings> productControllerSettings)
+        {
+            _productControllerSettings = productControllerSettings;
+        }
+
         public List<Product> GetListPaged(out int totalCount, int page, int categoryId)
         {
             using var context = new NorthwindContext();
@@ -17,12 +25,12 @@ namespace ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Repositor
             if (categoryId > 0)
                 query = query.Where(p => p.CategoryId == categoryId);
 
-            if (page > 0)
-                query = query.Skip((page - 1) * 10);
-
             totalCount = query.Count();
 
-            return query.Take(10).ToList();
+            if (page > 0)
+                query = query.Skip((page - 1) * _productControllerSettings.Value.IndexPageSize);
+
+            return query.Take(_productControllerSettings.Value.IndexPageSize).ToList();
         }
     }
 }

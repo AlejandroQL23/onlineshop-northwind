@@ -4,7 +4,7 @@
 <div class="list-group">
     @foreach (var category in Model.Categories)
     {
-        <a asp-controller="Product" asp-action="Index" asp-route-categoryId="@category.CategoryId"
+        <a asp-controller="Product" asp-action="Index" asp-route-category="@category.CategoryId"
            class="list-group-item @(category.CategoryId == Model.CurrentCategory ? "active": "")">
             @category.CategoryName
         </a>

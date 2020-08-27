@@ -1,29 +1,36 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using ShopOnline.Core.Settings;
 using ShopOnline.Northwind.Business.Interfaces;
 using ShopOnline.Northwind.MvcWebUI.Models;
+using System;
 
 namespace ShopOnline.Northwind.MvcWebUI.Controllers
 {
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-
-        public ProductController(IProductService productService)
+        private readonly IOptions<ProductControllerSettings> _productControllerSettings;
+        public ProductController(IProductService productService, IOptions<ProductControllerSettings> productControllerSettings)
         {
             _productService = productService;
+            _productControllerSettings = productControllerSettings;
         }
 
         [HttpGet]
-        public IActionResult Index(int page = 1, int categoryId = 0)
+        public IActionResult Index(int page = 1, int category = 0)
         {
             int totalCount = 0;
-            var products = _productService.GetListPaged(out totalCount, page, categoryId);
+
+            var products = _productService.GetListPaged(out totalCount, page, category);
 
             var productListViewModel = new ProductListViewModel
             {
-                Page = page,
-                PageSize = totalCount / 10,
-                Products = products
+                Products = products,
+                PageCount = (int)Math.Ceiling((double)totalCount / _productControllerSettings.Value.IndexPageSize),
+                PageSize = _productControllerSettings.Value.IndexPageSize,
+                CurrentCategory = category,
+                CurrentPage = page
             };
 
             return View(productListViewModel);
