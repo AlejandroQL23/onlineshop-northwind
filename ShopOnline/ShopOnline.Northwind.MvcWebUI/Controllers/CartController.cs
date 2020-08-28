@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopOnline.Northwind.Business.Interfaces;
+using ShopOnline.Northwind.Entities.Concrete;
 using ShopOnline.Northwind.MvcWebUI.Models;
 using ShopOnline.Northwind.MvcWebUI.Services;
 
@@ -60,6 +61,28 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
             TempData["message"] = $"Your product was successfully removed from the cart!";
 
             return RedirectToAction(nameof(List));
+        }
+
+        [HttpGet]
+        public IActionResult Complete()
+        {
+            var shippingDetailViewModel = new ShippingDetailViewModel
+            {
+                ShippingDetails = new ShippingDetails()
+            };
+
+            return View(shippingDetailViewModel);
+        }
+
+        [HttpPost]
+        public IActionResult Complete(ShippingDetails shippingDetails)
+        {
+            if (!ModelState.IsValid)
+                return View();
+
+            TempData["message"] = $"Thank you {shippingDetails.FirstName}, you order is in process";
+
+            return View();
         }
     }
 }

@@ -428,3 +428,4 @@ C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Mvc
 C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CategoryList\Default.cshtml.g.cs
 C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\CartSummary\Default.cshtml.g.cs
 C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\Razor\Views\Cart\List.cshtml.g.cs
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Complete.cshtml.g.cs
