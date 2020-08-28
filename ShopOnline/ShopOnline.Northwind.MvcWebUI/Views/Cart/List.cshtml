@@ -1,0 +1,85 @@
+﻿@model CartListViewModel
+@{
+    ViewData["Title"] = "Cart List";
+}
+
+<h1>Cart List</h1>
+
+@if (Model.Cart.Total > 0)
+{
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-danger" role="alert">
+            @TempData["message"]
+        </div>
+    }
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Units In Stock</th>
+                <th scope="col">Quantity</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Cart.CartLines)
+            {
+                <tr>
+                    <th scope="row">@item.Product.ProductId</th>
+                    <td>@item.Product.ProductName</td>
+                    <td>@item.Product.UnitPrice</td>
+                    <td>@item.Product.UnitsInStock</td>
+                    <td>@item.Quantity</td>
+                    <td>
+                        <a class="btn btn-danger btn-sm" asp-controller="Cart" asp-action="RemoveFromCart" asp-route-productId="@item.Product.ProductId">remove from cart</a>
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-right">
+                    <h5>Total:</h5>
+                </td>
+                <td>
+                    <h5>@Model.Cart.Total $</h5>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="text-right">
+                    <a asp-controller="Product" asp-action="Index" class="btn btn-sm btn-primary">
+                        <i class="fas fa-cart-plus mr-2"></i>Continue Shopping
+                    </a>
+                </td>
+                <td>
+                    <a asp-controller="Product" asp-action="Complete" class="btn btn-sm btn-success">
+                        <i class="fas fa-cash-register mr-2"></i>Go to Checkout
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <strong>Opps!</strong> There are no items in your cart.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <a asp-controller="Product" asp-action="Index" class="btn btn-sm btn-primary float-right">
+        <i class="fas fa-cart-plus mr-2"></i>Continue Shopping
+    </a>
+}

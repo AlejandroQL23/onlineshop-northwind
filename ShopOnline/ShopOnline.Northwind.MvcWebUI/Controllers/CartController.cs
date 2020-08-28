@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShopOnline.Northwind.Business.Interfaces;
+using ShopOnline.Northwind.MvcWebUI.Models;
 using ShopOnline.Northwind.MvcWebUI.Services;
 
 namespace ShopOnline.Northwind.MvcWebUI.Controllers
@@ -15,6 +16,19 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
             _cartSessionService = cartSessionService;
             _cartService = cartService;
             _productService = productService;
+        }
+
+        [HttpGet]
+        public IActionResult List()
+        {
+            var cart = _cartSessionService.GetCart();
+
+            var cartListViewModel = new CartListViewModel
+            {
+                Cart = cart
+            };
+
+            return View(cartListViewModel);
         }
 
         [HttpGet]
@@ -34,6 +48,18 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
             TempData["message"] = $"Your product, {productToBeAdded.ProductName}, was successfully added to the cart!";
 
             return RedirectToAction("Index", "Product");
+        }
+
+        [HttpGet]
+        public IActionResult RemoveFromCart(int productId)
+        {
+            var cart = _cartSessionService.GetCart();
+            _cartService.RemoveFromCart(cart, productId);
+            _cartSessionService.SetCart(cart);
+
+            TempData["message"] = $"Your product was successfully removed from the cart!";
+
+            return RedirectToAction(nameof(List));
         }
     }
 }
