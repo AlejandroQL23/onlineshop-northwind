@@ -434,3 +434,9 @@ C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.Mvc
 C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignUp.cshtml.g.cs
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\Razor\Views\Account\SignIn.cshtml.g.cs
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.MvcWebUI.csproj.CoreCompileInputs.cache
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.MvcWebUI.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\CihatSolak\source\repos\Shop-Online\ShopOnline\ShopOnline.Northwind.MvcWebUI\obj\Debug\netcoreapp3.1\ShopOnline.Northwind.MvcWebUI.MvcApplicationPartsAssemblyInfo.cache

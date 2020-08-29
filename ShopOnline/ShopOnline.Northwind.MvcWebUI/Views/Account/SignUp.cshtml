@@ -1,0 +1,68 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Sign Up";
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="tr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Node Modules -->
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css" />
+
+    <title>Sign Up - Shop Online</title>
+</head>
+<body>
+
+    <div class="container my-5 px-5">
+
+        <div class="card">
+            <div class="card-header bg-info text-white text-uppercase">
+                Sign In - Shop Online
+                <span class="float-right">
+                    <a asp-action="SignIn" class="badge badge-warning">Sign In</a>
+                </span>
+            </div>
+            <div class="card-body">
+                <form asp-action="SignUp" method="post">
+
+                    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+
+                    <div class="form-group my-2">
+                        <label asp-for="UserName"></label>
+                        <input asp-for="UserName" class="form-control">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group my-2">
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" class="form-control">
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group my-2">
+                        <label asp-for="ConfirmPassword"></label>
+                        <input asp-for="ConfirmPassword" class="form-control">
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                    <div class="form-group my-2">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-warning">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="/node_modules/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/node_modules/font-awesome/js/all.min.js"></script>
+</body>
+</html>

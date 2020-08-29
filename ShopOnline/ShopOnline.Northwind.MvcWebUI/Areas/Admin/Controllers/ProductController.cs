@@ -27,9 +27,11 @@ namespace ShopOnline.Northwind.MvcWebUI.Areas.Admin.Controllers
 
             foreach (var category in categories)
             {
-                var selectListItem = new SelectListItem();
-                selectListItem.Text = category.CategoryName;
-                selectListItem.Value = $"{category.CategoryId}";
+                var selectListItem = new SelectListItem
+                {
+                    Text = category.CategoryName,
+                    Value = $"{category.CategoryId}"
+                };
 
                 if (productCategoryId > 0)
                     selectListItem.Selected = productCategoryId == category.CategoryId;

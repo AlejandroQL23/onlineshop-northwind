@@ -75,6 +75,7 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Complete(ShippingDetails shippingDetails)
         {
             if (!ModelState.IsValid)

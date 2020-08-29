@@ -16,7 +16,7 @@ namespace ShopOnline.Northwind.MvcWebUI.ExtensionMethods
             string objectString = session.GetString(key);
 
             if (string.IsNullOrWhiteSpace(objectString))
-                return default(T);
+                return default;
 
             T value = JsonConvert.DeserializeObject<T>(objectString);
 

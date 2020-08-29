@@ -20,9 +20,7 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
         [HttpGet]
         public IActionResult Index(int page = 1, int category = 0)
         {
-            int totalCount = 0;
-
-            var products = _productService.GetListPaged(out totalCount, page, category);
+            var products = _productService.GetListPaged(out int totalCount, page, category);
 
             var productListViewModel = new ProductListViewModel
             {

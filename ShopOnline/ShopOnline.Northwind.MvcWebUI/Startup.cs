@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +10,7 @@ using ShopOnline.Northwind.Business.Concrete;
 using ShopOnline.Northwind.Business.Interfaces;
 using ShopOnline.Northwind.DataAccess.Concrete.EntityFrameworkCore.Repositories;
 using ShopOnline.Northwind.DataAccess.Interfaces;
+using ShopOnline.Northwind.MvcWebUI.Entities;
 using ShopOnline.Northwind.MvcWebUI.Middlewares;
 using ShopOnline.Northwind.MvcWebUI.Services;
 
@@ -27,6 +30,15 @@ namespace ShopOnline.Northwind.MvcWebUI
             services.AddHttpContextAccessor();
 
             services.Configure<ProductControllerSettings>(Configuration.GetSection(nameof(ProductControllerSettings)));
+
+            services.AddDbContext<CustomIdentityDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("Default"));
+            });
+
+            services.AddIdentity<CustomIdentityUser, CustomIdentityRole>()
+                    .AddEntityFrameworkStores<CustomIdentityDbContext>()
+                    .AddDefaultTokenProviders();
 
             services.AddScoped<IProductDal, EfProductRepository>();
             services.AddScoped<IProductService, ProductManager>();
@@ -52,19 +64,22 @@ namespace ShopOnline.Northwind.MvcWebUI
 
             app.UseSession();
 
+            app.UseAuthentication();
+            app.UseAuthorization();
+
             app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute
                 (
-                    name:"areas",
+                    name: "areas",
                     pattern: "{area}/{controller=Account}/{action=SignIn}/{id?}"
                 );
 
                 endpoints.MapControllerRoute
                 (
-                    name:"default",
+                    name: "default",
                     pattern: "{controller=Product}/{action=Index}/{id?}"
                 );
             });
