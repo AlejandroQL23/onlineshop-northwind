@@ -52,9 +52,21 @@ namespace ShopOnline.Northwind.MvcWebUI
 
             app.UseSession();
 
+            app.UseStaticFiles();
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllerRoute
+                (
+                    name:"areas",
+                    pattern: "{area}/{controller=Account}/{action=SignIn}/{id?}"
+                );
+
+                endpoints.MapControllerRoute
+                (
+                    name:"default",
+                    pattern: "{controller=Product}/{action=Index}/{id?}"
+                );
             });
         }
     }

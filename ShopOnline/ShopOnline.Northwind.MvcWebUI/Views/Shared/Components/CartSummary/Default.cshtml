@@ -1,16 +1,25 @@
 ﻿@model CartSummaryViewModel
 
-    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        @foreach (var cartLine in Model.Cart.CartLines)
+<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    @if (0 >= Model.Cart.Total)
+    {
+        <a class="dropdown-item">
+            <i class="fa fa-shopping-cart mr-1" aria-hidden="true"></i>
+        </a>
+    }
+    else
+    {
+        foreach (var cartLine in Model.Cart.CartLines)
         {
             <a class="dropdown-item" href="#">
                 @cartLine.Product.ProductName (@cartLine.Quantity)
             </a>
         }
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item">
-            Total (Dollar) : @Model.Cart.Total $
-        </a>
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" asp-controller="Cart" asp-action="List">Go to cart details</a>
-    </div>
+    }
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item">
+        Total (Dollar) : @Model.Cart.Total $
+    </a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" asp-controller="Cart" asp-action="List">Go to cart details</a>
+</div>
