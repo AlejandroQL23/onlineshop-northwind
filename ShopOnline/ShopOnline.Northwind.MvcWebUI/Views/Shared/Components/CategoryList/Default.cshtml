@@ -1,10 +1,11 @@
 ﻿@model CategoryListViewModel
-
-
+@{ 
+}
+<h5 class="text-center">Categories</h5>
 <div class="list-group">
     @foreach (var category in Model.Categories)
     {
-        <a asp-controller="Product" asp-action="Index" asp-route-category="@category.CategoryId"
+        <a asp-controller="Product" asp-action="Index" asp-route-page="@Model.CurrentPage" asp-route-category="@category.CategoryId"
            class="list-group-item @(category.CategoryId == Model.CurrentCategory ? "active": "")">
             @category.CategoryName
         </a>

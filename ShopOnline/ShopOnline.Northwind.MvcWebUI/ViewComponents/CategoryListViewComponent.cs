@@ -19,7 +19,8 @@ namespace ShopOnline.Northwind.MvcWebUI.ViewComponents
             var model = new CategoryListViewModel
             {
                 Categories = _categoryService.GetAll(),
-                CurrentCategory = Convert.ToInt32(HttpContext.Request.Query["category"])
+                CurrentCategory = Convert.ToInt32(HttpContext.Request.Query["category"]),
+                CurrentPage = Convert.ToInt32(HttpContext.Request.Query["page"])
             };
 
             return await Task.Run(() => View(model));

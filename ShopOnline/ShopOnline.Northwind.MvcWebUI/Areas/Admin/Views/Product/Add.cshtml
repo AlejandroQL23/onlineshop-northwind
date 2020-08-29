@@ -3,7 +3,7 @@
     ViewData["Title"] = "Product Add";
 }
 
-<h2>Add a product</h2>
+<h4 class="my-3">Add a product</h4>
 
 <form asp-controller="Product" asp-action="Add" method="post">
     @await Html.PartialAsync("_AddOrUpdate", Model)

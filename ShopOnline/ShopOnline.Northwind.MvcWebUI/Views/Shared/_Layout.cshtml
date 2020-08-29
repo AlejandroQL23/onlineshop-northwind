@@ -17,7 +17,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand mr-auto mx-2" href="#">
+        <a class="navbar-brand mr-auto mx-2" asp-controller="Product" asp-action="Index">
             <img src="~/img/logo.png" width="50" height="30" class="d-inline-block align-top" alt="" loading="lazy">
             Northwind
         </a>
@@ -25,17 +25,16 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse ml-3" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Link <span class="sr-only">(current)</span></a>
-                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" asp-controller="Account" asp-action="SignIn">
+                        <i class="fa fa-user-secret mr-2" aria-hidden="true"></i>Admin
+                    </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        <i class="fa fa-shopping-cart mr-2" aria-hidden="true"></i> Basket
                     </a>
                     @await Component.InvokeAsync("CartSummary")
                 </li>

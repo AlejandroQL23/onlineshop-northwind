@@ -7,5 +7,6 @@ namespace ShopOnline.Northwind.MvcWebUI.Models
     {
         public List<Category> Categories { get; internal set; }
         public int CurrentCategory { get; internal set; }
+        public int CurrentPage { get; set; }
     }
 }
