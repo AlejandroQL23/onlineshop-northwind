@@ -100,8 +100,7 @@ namespace ShopOnline.Northwind.MvcWebUI.Controllers
             return RedirectToAction("Index", "Product", new { area = Role.ADMIN });
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> SignOut()
         {
             await _signInManager.SignOutAsync();
