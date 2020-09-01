@@ -1,4 +1,4 @@
-# Shop-Online
+# Shop Online
 ##### Construct an infrastructure for an online shopping site on a .net core platform. 
 ##### The project consists of five layers.
 
