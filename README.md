@@ -8,19 +8,19 @@ I designed a shopping site with asp net core 3.1 using the northwind database. I
 
 ![sepet](https://user-images.githubusercontent.com/54249736/92277188-1b461080-eefb-11ea-8aed-e9e2f2bb153c.png)
 
-#### Uploaded Packages (ShopOnline.Core)
+#### Installed Packages (ShopOnline.Core)
  * Microsoft.EntityFrameworkCore
  
-#### Uploaded Packages (ShopOnline.Northwind.Business)
+#### Installed Packages (ShopOnline.Northwind.Business)
   * NotFound.
 
-#### Uploaded Packages (ShopOnline.Northwind.DataAccess)
+#### Installed Packages (ShopOnline.Northwind.DataAccess)
  * Microsoft.EntityFrameworkCore.SqlServer
  
-#### Uploaded Packages (ShopOnline.Northwind.Entities)
+#### Installed Packages (ShopOnline.Northwind.Entities)
  * NotFound.
  
- #### Uploaded Packages (ShopOnline.Northwind.MvcWebUI)
+ #### Installed Packages (ShopOnline.Northwind.MvcWebUI)
  * Microsoft.AspNetCore.Authentication.Cookies,
  * Microsoft.AspNetCore.Identity.EntityFrameworkCore,
  * Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation,
