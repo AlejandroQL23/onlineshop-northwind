@@ -12,13 +12,13 @@ I designed a shopping site with asp net core 3.1 using the northwind database. I
  * Microsoft.EntityFrameworkCore
  
 #### Installed Packages (ShopOnline.Northwind.Business)
-  * NotFound.
+  * There is no package installed.
 
 #### Installed Packages (ShopOnline.Northwind.DataAccess)
  * Microsoft.EntityFrameworkCore.SqlServer
  
 #### Installed Packages (ShopOnline.Northwind.Entities)
- * NotFound.
+ * There is no package installed.
  
  #### Installed Packages (ShopOnline.Northwind.MvcWebUI)
  * Microsoft.AspNetCore.Authentication.Cookies,
